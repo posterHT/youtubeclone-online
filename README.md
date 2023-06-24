@@ -6,11 +6,16 @@ Youtube Clone Template (Online Version)
 Anasayfa ve video oynatma sayfası bu projede yer almaktadır.
 Video oynatma tarafında youtube frameleri kullanılmıştır
 Herhangi videoyu sunucu veya cihaz tarafına indirerek videoları yedekleyebilirsiniz
-MP3 ve MP4 formatında video yükleme seçeneği eklenmiştir. Sayfada karşınıza çıkarn her video Youtube keşfetten çıkmaktadır
+MP3 ve MP4 formatında video yükleme seçeneği eklenmiştir. Sayfada karşınıza çıkarn her video kaynağı Youtube keşfetten alınmaktadır
+
+
+# Uyarı
+Youtube Api sınırı günlük 10.000 pointtir bu seviyenin aşılması durumunda videoların yinelenmesinde aksama olabilir daha fazla kapasite için projemizde seri anahtar yardımcısı vardır birden fazla anahtar kullanarak kullanım sınırını arttırabilirsiniz.
 
 
 # Lisans
 Bu projenin kaynaklarına erişim sınırsızdır bu proje üzerinde yaptığınız herhangi bir değişiklikten siz sorumlusunuz
+
 
 # Kurulum
 Proje PHP destekleyen local sunucu veya herhangi bir hosting sunucusu ile çalıştırılabilir hosting sunucusu tavsiye edilir.
