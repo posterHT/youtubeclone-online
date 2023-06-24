@@ -6,7 +6,7 @@ Youtube Clone Template (Online Version)
 Anasayfa ve video oynatma sayfası bu projede yer almaktadır.
 Video oynatma tarafında youtube frameleri kullanılmıştır
 Herhangi videoyu sunucu veya cihaz tarafına indirerek videoları yedekleyebilirsiniz
-MP3 ve MP4 formatında video yükleme seçeneği eklenmiştir
+MP3 ve MP4 formatında video yükleme seçeneği eklenmiştir. Sayfada karşınıza çıkarn her video Youtube keşfetten çıkmaktadır
 
 
 # Lisans
