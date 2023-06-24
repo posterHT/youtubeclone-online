@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Sharing Platform</title>
+    <link rel="stylesheet" href="style.css?v=1.9">
+    <style>
+        #videxample {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="images/menu.png" class="menu-icon">
+            <a href="./"><img src="images/logo.png?v" class="logo"></a>
+        </div>
+
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search" id="searchTextBox" onkeypress="keypress(event)">
+                <img src="images/search.png" onclick="search()">
+            </div>
+            <img src="images/voice-search.png" class="mic-icon">
+        </div>
+
+        <div class="nav-right flex-div">
+            <img src="images/upload.png">
+            <img src="images/more.png">
+            <img src="images/notification.png">
+            <img src="images/Jack.png" class="user-icon">
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+
+    <div class="sidebar small-sidebar" onmouseover="showScrollbar()" onmouseout="hideScrollbar()">
+        <div class="shortcut-links">
+            <a href=""> <img src="images/home.png">
+                <p>Home</p>
+            </a>
+            <a href=""> <img src="images/explore.png">
+                <p>Explore</p>
+            </a>
+            <a href=""> <img src="images/subscriprion.png">
+                <p>Subscriprion</p>
+            </a>
+            <a href=""> <img src="images/library.png">
+                <p>Library</p>
+            </a>
+            <a href=""> <img src="images/history.png">
+                <p>History</p>
+            </a>
+            <a href=""> <img src="images/playlist.png">
+                <p>Playlist</p>
+            </a>
+            <a href=""> <img src="images/messages.png">
+                <p>Messages</p>
+            </a>
+            <a href=""> <img src="images/show-more.png">
+                <p>Show More</p>
+            </a>
+            <hr>
+        </div>
+        <div class="subscribed-list">
+            <h3>SUBSCRIBED</h3>
+            <a href=""> <img src="images/Jack.png">
+                <p>Jack Nicholson</p>
+            </a>
+            <a href=""> <img src="images/simon.png">
+                <p>Simon Baker</p>
+            </a>
+            <a href=""> <img src="images/tom.png">
+                <p>Tom Hardy</p>
+            </a>
+            <a href=""> <img src="images/megan.png">
+                <p>Megan Ryan</p>
+            </a>
+            <a href=""> <img src="images/cameron.png">
+                <p>Cameron Diaz</p>
+            </a>
+
+            <div class="hidden-channels">
+                <a href=""> <img src="images/Jack.png">
+                    <p>Jack Nicholson2</p>
+                </a>
+                <a href=""> <img src="images/simon.png">
+                    <p>Simon Baker2</p>
+                </a>
+                <a href=""> <img src="images/tom.png">
+                    <p>Tom Hardy2</p>
+                </a>
+                <a href=""> <img src="images/megan.png">
+                    <p>Megan Ryan2</p>
+                </a>
+                <a href=""> <img src="images/cameron.png">
+                    <p>Cameron Diaz2</p>
+                </a>
+            </div>
+            <button id="showMoreBtn">Daha Fazla Göster</button>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+        </div>
+    </div>
+
+    <!-- sidebar close -->
+    <!-- Example Video Template -->
+    <div class="vid-list" id="videxample">
+        <a onclick="goToVideo('VIDEOID')"><img src="#THUMBNAIL_SRC" style="border-radius: 10px;"></a>
+        <div class="flex-div">
+            <!-- <img src=""> -->
+            <div class="vid-info">
+                <a href="">#VIDEO_TITLE</a>
+                <p>#CHANNEL_TITLE</p>
+                <p>#VIDEO_VIEWS &bull; #VIDEO_LIKES <img src="images/like.png" width="10"></p>
+            </div>
+        </div>
+    </div>
+    <!-- Example Video Template Ended -->
+    <!-- main start-->
+    <div class="container large-container">
+        <div class="banner">
+            <img src="images/banner.png">
+
+        </div>
+        <div class="list-container" id="vidlist">
+            <div style="background-color: #242222;  height:1200px; color:white" id="startDiv">
+                Loading...
+            </div>
+        </div>
+    </div>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+
+
+    <script src="index.js?v=1.3"></script>
+    <script src="youtube.js?v=1.7"></script>
+
+    <script>
+
+       function keypress(event){
+            if(event.keyCode ==13)
+            {
+                search();
+            }       
+       }
+       var queryParams = getQueryParams();
+       s_q= queryParams['q'];
+       if(s_q){
+         _("searchTextBox").value = s_q;
+         search();
+       }
+    </script>
+</body>
+
+</html>
