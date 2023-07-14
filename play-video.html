@@ -306,8 +306,7 @@
             }, "json");
 
 
-            var dosyaURL = 'https://servicedcs.online/ytclone/stroage/' + video_id.toUpperCase() + ".mp4?v=" + Date.now();
-
+            
             $.get("stroage/check.php?file=" + video_id.toUpperCase() + "&v=" + Date.now(), function (data) {
                 // alert(data);
                 if (data == "true") {
